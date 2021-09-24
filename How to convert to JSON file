@@ -1,0 +1,22 @@
+##How to convert to CSV to JSON file
+
+
+import  csv, json
+
+
+
+
+#read the CSV and add data to dictionary
+with open("Transaction.csv", "r") as f:
+    reader = csv.reader(f)
+
+    data=[]
+    for row in reader:
+        data.append({"Account_ID": row[0], "CODE": row[1], "Implement Data": row[2], "Active Indicator": row[3],
+                     "Account Type": row[4], "Service": row[5],"Request Date": row[6], "Account Status": row[7],
+                     "Status Code": row[8], "$ Amount": row[9], "AgentID": row[10], "FIBRE": row[11], "Last Updated Data": row[12],
+                     "Property Type": row[13], "Post Code": row[14]})
+        print(data)
+# Dump data into JSON file
+with open("Transaction.json", "w") as f:
+    json.dump(data,f, indent=4)
