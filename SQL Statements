@@ -1,0 +1,3 @@
+SELECT *
+FROM Transaction
+Order By Request Date ASC, Implement Date ASC;
