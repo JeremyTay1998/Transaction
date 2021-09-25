@@ -1,0 +1,3 @@
+SELECT TOP (AGENTID), (Post Code), ($ Amount)
+FROM Transaction
+ORDER BY ($ Amount) DESC;
